@@ -1,9 +1,9 @@
 CPU
 ===
 
-Homebrew (hackerspacebrew) 8bit CPU. MISC type as there are 6 only instructions
-(except nop) and each can be conditional. With sixteen 8bit registers, no pipelining
-and no superscalarity.
+Homebrew (hackerspacebrew) 8bit CPU. MISC type as there are only 6 instructions
+(except nop) and each can be conditional. With sixteen 8bit registers, mmaped IO,
+no pipelining and no superscalarity.
 
 Files:
 ------
