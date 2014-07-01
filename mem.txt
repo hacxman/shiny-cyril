@@ -1,0 +1,18 @@
+top is at 0xffffff, - 24bits
+
+PC     - 0xFF FF [FD-FF] - RW - 24b LE address instruction pointer
+PCC    - 0xFF FF FC      -  W - PC commit. write 0x01 to jump at address in PC
+STATUS - 0xFF FF FB      - ?? - unspecified yet
+SYSCAL - 0xFF FF FA      - ?W - write to trigger syscall
+
+region - 0xFE [00 00 - FF FF] - mmio
+
+interrupts:
+
+for simplicity there will probably be 16 interrupts while some of them reserved
+for system tasks - i.e. syscall, systick, fault, etc.
+
+INTx  - 0x00 00 [00-02] + x * 4 - 32b aligned x-th interrupt pointer
+INTxC - 0x00 00 03 + x * 4      - 32b aligned x-th interrupt pointers control byte
+
+
