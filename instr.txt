@@ -1,0 +1,11 @@
+[addr] is 3 B LE
+
+bbbb bbbb
+
+0000 0000                                   nop
+crrr 0010  0aaa 0000                        mov %reg, %reg
+crrr 1110  aaaa aaaa                        mov %reg, val
+crrr 0011  aaaa aaaa  aaaa aaaa  aaaa aaaa  ld  %reg, [addr]
+crrr 0100  aaaa aaaa  aaaa aaaa  aaaa aaaa  st  %reg, [addr]
+crrr 1001  0aaa 0bbb                        add %out, %in0, %in1
+crrr 1010  0aaa 0bbb                        sub %out, %in0, %in1
