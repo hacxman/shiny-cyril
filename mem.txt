@@ -14,5 +14,7 @@ for system tasks - i.e. syscall, systick, fault, etc.
 
 INTx  - 0x00 00 [00-02] + x * 4 - 32b aligned x-th interrupt pointer
 INTxC - 0x00 00 03 + x * 4      - 32b aligned x-th interrupt pointers control byte
+SP    - 0x00 00 [40-42]         - stack pointer
+IND   - 0x00 00 44              - 8bit indirect addressing register for st and ld instructions, this is top 8 bits of an address
 
 
